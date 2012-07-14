@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <title>kinesisKeyboard</title>
+        <link rel="stylesheet" href="css/jquery-ui-1.8.21.custom.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <link href="css/keyboard.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/kinesis.css">
+        <script src="js/kinesis.js"></script>
+        <script src="js/bridge.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script >
+              $(function(){
+                        bridge.setOpts({holdtime:1000});
+                        $('.kinesiskeyboard').keyboard();
+              });
+        </script>
+        <script>
+            $(document).ready(function(){
+            if(location.search.length > 0){
+                $("form").append("<br/><div class=\"alert\"> <button class=\"close\" data-dismiss=\"alert\">×</button> Your details have been submitted. </div> ")
+                  $(".alert").alert();
+              }
+            })   
+        </script>
+        <style>
+            body{
+                background-color: white;
+                
+            }
+            .kk-form{
+                box-shadow:0px 0px 4px grey;
+            }
+            .kk-head{
+                margin-bottom: 50px;
+                margin-top: 30px;
+                box-shadow:0px 0px 4px grey;
+            }
+            .container{
+                box-shadow: 0px 0px 6px grey;
+                background-color: #EDFFF3;
+                min-height: 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="kk-head hero-unit">
+                <h1> kinesisKeyboard </h1>
+                <p> onscreen keyboard compatible with the kinesis framework</p>
+            </div>
+        <div class="row">
+            <div class="span6 offset3">
+                <form class="well kk-form" action="#" method="GET">
+                    <br/>
+                    <span class="label"> Name </span> <br/><br/>
+                    <input name="name" class="interactive kinesiskeyboard" type="text" /><br/><br/>
+                    <span class="label"> Nickname </span><br/><br/>
+                    <input name="nick" class="interactive kinesiskeyboard" type="text" /><br/><br/><br/>
+                    <button id="kk-btn" type="submit" class="interactive btn btn-primary">Submit</button><br/>
+                    </form>
+            </div>
+            
+        </div>
+        </div>
+    </body>
+</html>
