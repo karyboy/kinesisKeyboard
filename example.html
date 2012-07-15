@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kinesisKeyboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!-- Using Twitter Bootstrap for this example  -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/bootstrap-alert.js"></script>
+        
+        <!-- jquery ui light theme for the keyboard , any other jquery ui theme can be used to change keyboard appearance-->
+        <link rel="stylesheet" href="css/jquery-ui-1.8.21.custom.css" />
+	
+        <!-- jquery and jquery ui required for kinesisKeyboard-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        
+        <!-- required for mottie keyboard -->
+        <link href="css/keyboard.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+        
+        <!-- required kinesis files-->
+        <link rel="stylesheet" type="text/css" href="css/kinesis.css">
+        <script src="js/kinesis.js"></script>
+        
+        <!-- required , bridges the document events with the kinesis -->
+        <script src="js/bridge.js"></script>
+        
+        <!-- initialize mottie keyboard and bridge object -->
+        <script >
+              $(function(){
+                        bridge.setOpts({holdtime:1000});  // holdtime sets the time after which the character under kinesis cursor is input to the field
+                        $('.kinesiskeyboard').keyboard(); // jquery selector for the input element 
+              });
+        </script>
+        
+        <!-- code used in this example -->
+        <script>
+            $(document).ready(function(){
+            if(location.search.length > 0){
+                $("form").append("<br/><div class=\"alert\"> <button class=\"close interactive\" data-dismiss=\"alert\">×</button> Your details have been submitted. </div> ")
+                  $(".alert").alert();
+              }
+            })   
+        </script>
+        <style>
+            body{
+                background-color: white;
+                
+            }
+            .kk-form{
+                box-shadow:0px 0px 1px grey;
+            }
+            .kk-head{
+                margin-bottom: 50px;
+                margin-top: 0px;
+                box-shadow:0px 0px 3px grey;
+                padding:35px;
+            }
+            .container{
+                box-shadow: 0px 0px 6px grey;
+                background-color: #EDFFF3;
+                min-height: 700px;
+            }
+            .kk-notify{
+               font-size: 14px;
+               margin-bottom: 20px;
+            }
+            .kk-notify > li{
+                margin-top: 20px;
+            }
+            .kk-github{
+               position: relative;
+               top: -20px;
+               left:300px;
+            }
+         
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="kk-head hero-unit">
+                <h1> kinesisKeyboard </h1>
+                <p> onscreen keyboard compatible with the kinesis framework</p>
+                <div class="kk-alert alert alert-info" ><p><a href="http://kinesis.io" target="_blank">kinesis</a> framework required to control with kinect sensor or kinect simulator</p></div>
+                <a class="btn btn-primary" href="https://github.com/karyboy/kinesisKeyboard">View on Github</a>
+            </div>
+        <div class="row">
+            <div class="span4 offset1">
+                <div class="kk-alert alert alert-info" ><ul class="kk-notify"><li>Move the kinesis cursor over the input fields to display the keyboard.</li><li>Move the kinesis cursor over the keyboard keys, hold over it for 1 second (hold time can be changed in the options) to input character.</li><li> Move over ACCEPT.</li></ul></div>
+            </div>
+            <div class="span5 offset1">
+                <form class="well kk-form" action="#" method="GET">
+                    <br/>
+                    <span class="label"> Name </span> <br/><br/>
+                    <input name="name" class="interactive kinesiskeyboard" type="text" /><br/><br/>
+                    <span class="label"> Nickname </span><br/><br/>
+                    <input name="nick" class="interactive kinesiskeyboard" type="text" /><br/><br/><br/>
+                    <button id="kk-btn" type="submit" class="interactive btn btn-primary">Submit</button><br/>
+                </form>
+            </div>
+            
+        </div>
+        </div>
+    </body>
+</html>
