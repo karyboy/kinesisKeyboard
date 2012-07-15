@@ -1,7 +1,7 @@
 var InteractionEventTypes = {
     'InteractionEventTypeGesture': 0,
     'InteractionEventTypeSpeech': 1,
-    'InteractionEventTypeCursor': 2
+    'InteractionEventTypeCursor': 2 
 };
 var GestureTypes = {
     'GestureTypeSwipe': 0,
