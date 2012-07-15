@@ -16,8 +16,8 @@
         <script src="js/bootstrap-alert.js"></script>
         <script >
               $(function(){
-                        bridge.setOpts({holdtime:1000});
-                        $('.kinesiskeyboard').keyboard();
+                        bridge.setOpts({holdtime:1000});  // holdtime sets the time after which the character under kinesis cursor is input to the field
+                        $('.kinesiskeyboard').keyboard(); // jquery selector for the input element 
               });
         </script>
         <script>
