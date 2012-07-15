@@ -4,7 +4,7 @@
 ## kinesisKeyboard
 
 
-kinesisKeyboard is an onscreen keyboard that can be used with the kinesis framework for kinect by web applications to input characters in input , textarea etc. using the kinect motion sensor. It uses the [mottie keyboard](https://github.com/Mottie/Keyboard) and bridges it with [kinesis](http://kinesis.io).
+kinesisKeyboard is an onscreen keyboard that can be used by web applications, with the kinesis framework for kinect, to input characters in input fields , textarea etc. using the kinect motion sensor. It uses the [mottie keyboard](https://github.com/Mottie/Keyboard) and bridges it with [kinesis](http://kinesis.io).
 
 ## Usage
 
