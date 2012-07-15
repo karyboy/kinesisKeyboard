@@ -39,7 +39,7 @@
         <script>
             $(document).ready(function(){
             if(location.search.length > 0){
-                $("form").append("<br/><div class=\"alert\"> <button class=\"close\" data-dismiss=\"alert\">×</button> Your details have been submitted. </div> ")
+                $("form").append("<br/><div class=\"alert\"> <button class=\"close interactive\" data-dismiss=\"alert\">×</button> Your details have been submitted. </div> ")
                   $(".alert").alert();
               }
             })   
@@ -50,18 +50,32 @@
                 
             }
             .kk-form{
-                box-shadow:0px 0px 4px grey;
+                box-shadow:0px 0px 1px grey;
             }
             .kk-head{
                 margin-bottom: 50px;
-                margin-top: 30px;
-                box-shadow:0px 0px 4px grey;
+                margin-top: 0px;
+                box-shadow:0px 0px 3px grey;
+                padding:35px;
             }
             .container{
                 box-shadow: 0px 0px 6px grey;
                 background-color: #EDFFF3;
                 min-height: 700px;
             }
+            .kk-notify{
+               font-size: 14px;
+               margin-bottom: 20px;
+            }
+            .kk-notify > li{
+                margin-top: 20px;
+            }
+            .kk-github{
+               position: relative;
+               top: -20px;
+               left:300px;
+            }
+         
         </style>
     </head>
     <body>
@@ -69,9 +83,14 @@
             <div class="kk-head hero-unit">
                 <h1> kinesisKeyboard </h1>
                 <p> onscreen keyboard compatible with the kinesis framework</p>
+                <div class="kk-alert alert alert-info" ><p><a href="http://kinesis.io" target="_blank">kinesis</a> framework required to control with kinect sensor or kinect simulator</p></div>
+                <a class="btn btn-primary" href="https://github.com/karyboy/kinesisKeyboard">View on Github</a>
             </div>
         <div class="row">
-            <div class="span6 offset3">
+            <div class="span4 offset1">
+                <div class="kk-alert alert alert-info" ><ul class="kk-notify"><li>Move the kinesis cursor over the input fields to display the keyboard.</li><li>Move the kinesis cursor over the keyboard keys, hold over it for 1 second (hold time can be changed in the options) to input character.</li><li> Move over ACCEPT.</li></ul></div>
+            </div>
+            <div class="span5 offset1">
                 <form class="well kk-form" action="#" method="GET">
                     <br/>
                     <span class="label"> Name </span> <br/><br/>
@@ -79,7 +98,7 @@
                     <span class="label"> Nickname </span><br/><br/>
                     <input name="nick" class="interactive kinesiskeyboard" type="text" /><br/><br/><br/>
                     <button id="kk-btn" type="submit" class="interactive btn btn-primary">Submit</button><br/>
-                    </form>
+                </form>
             </div>
             
         </div>

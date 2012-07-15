@@ -189,7 +189,7 @@ $.keyboard = function(el, options,callback){
 
 	};
 
-	base.focusOn = function(){ console.log("yahn to ghusa");
+	base.focusOn = function(){ 
 		if (base.$el.is(':visible')) {
 			// caret position is always 0,0 in webkit; and nothing is focused at this point... odd
 			// save caret position in the input to transfer it to the preview
@@ -428,7 +428,7 @@ $.keyboard = function(el, options,callback){
 
 		base.$allKeys
 			.bind('click', function(e){ //changed here 
-			//.bind(o.keyBinding.split(' ').join('.keyboard ') + '.keyboard repeater.keyboard', function(e){ console.log("yeh hua ");
+			//.bind(o.keyBinding.split(' ').join('.keyboard ') + '.keyboard repeater.keyboard', function(e){ 
                         // 'key', { action: doAction, original: n, curTxt : n, curNum: 0 }
 				var txt, key = $.data(this, 'key'), action = key.action.split(':')[0];
 				base.$preview.focus();
