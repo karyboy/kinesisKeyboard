@@ -123,7 +123,7 @@
     
     
     bridge.fireClic=function(){
-        console.log("firing click");
+       // console.log("firing click");
         _.dispatcheEvent(_.current,{
             typeEvent:"click"
         });

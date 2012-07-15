@@ -2,24 +2,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/bootstrap.css" />
         <title>kinesisKeyboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!-- Using Twitter Bootstrap for this example  -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/bootstrap-alert.js"></script>
+        
+        <!-- jquery ui light theme for the keyboard , any other jquery ui theme can be used to change keyboard appearance-->
         <link rel="stylesheet" href="css/jquery-ui-1.8.21.custom.css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	
+        <!-- jquery and jquery ui required for kinesisKeyboard-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        
+        <!-- required for mottie keyboard -->
         <link href="css/keyboard.css" rel="stylesheet">
 	<script src="js/jquery.keyboard.js"></script>
+        
+        <!-- required kinesis files-->
         <link rel="stylesheet" type="text/css" href="css/kinesis.css">
         <script src="js/kinesis.js"></script>
+        
+        <!-- required , bridges the document events with the kinesis -->
         <script src="js/bridge.js"></script>
-        <script src="js/bootstrap-alert.js"></script>
+        
+        <!-- initialize mottie keyboard and bridge object -->
         <script >
               $(function(){
                         bridge.setOpts({holdtime:1000});  // holdtime sets the time after which the character under kinesis cursor is input to the field
                         $('.kinesiskeyboard').keyboard(); // jquery selector for the input element 
               });
         </script>
+        
+        <!-- code used in this example -->
         <script>
             $(document).ready(function(){
             if(location.search.length > 0){
