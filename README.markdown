@@ -1,4 +1,4 @@
-Experience it here - [kinesisKeyboard](http://karyboy.github.com/kinesisKeyboard) (You must have the kinect sdk for windows installed for using kinect sensor or have the kinesis simulator - you can download both from [here](http://kinesis.io))
+Experience it here - [kinesisKeyboard](http://karyboy.github.com/kinesisKeyboard) (You must have the kinect sdk for windows installed for using kinect sensor or have the kinesis simulator - you can download both from [here](http://kinesis-io.github.io/))
 
 ## kinesisKeyboard
 
